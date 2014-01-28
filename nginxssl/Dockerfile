@@ -1,6 +1,7 @@
 FROM ubuntu:12.04
 
-MAINTAINER cpswan
+MAINTAINER cohesiveft
+
 # add universe repository to /etc/apt/sources.list
 # we need it for nginx
 RUN sed -i s/main/'main universe'/ /etc/apt/sources.list
@@ -28,4 +29,4 @@ EXPOSE 443
 CMD service nginx start
 
 # Example runline:
-# sudo docker run -d -p 443:443 cpswan/nginxssl
+# sudo docker run -d -p 443:443 cohesiveft/nginxssl
